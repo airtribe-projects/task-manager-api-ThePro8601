@@ -12,7 +12,7 @@ app.post("/tasks", (req, res) => {
     const { title, description, completed, priority } = req.body;
 
     if (!title || title.trim() === "") {
-        return res.status(400).json({ message: "Title is required" });
+        return res.status(400).json({ message: "Title is required " });
     }
 
     if (priority && !validPriorities.includes(priority)) {
